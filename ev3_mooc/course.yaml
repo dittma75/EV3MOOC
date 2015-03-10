@@ -1,0 +1,77 @@
+assessment_confirmations:
+  result_text: {fail: 'Unfortunately, based on your overall course score of %s%%,
+      you did not
+
+      receive a sufficiently high score to obtain a certificate of completion.
+
+      We encourage you to review the lessons noted and to attempt the
+
+      assessment again before it closes. Certificate or not, we hope you
+
+      enjoyed taking the course and learned new skills!
+
+      ', pass: 'Based on your overall course score of %s%%, you have passed the course.
+
+      Congratulations!
+
+      '}
+base: {after_body_tag_begins: <!-- base.after_body_tag_begins -->, after_main_content_ends: <!--
+    base.after_main_content_ends -->, after_navbar_begins: <!-- base.after_navbar_begins
+    -->, after_top_content_ends: <!-- base.after_top_content_ends -->, before_body_tag_ends: <!--
+    base.before_body_tag_ends -->, before_head_tag_ends: '<script>
+
+    (function(i,s,o,g,r,a,m){i[''GoogleAnalyticsObject'']=r;i[r]=i[r]||function(){
+
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+    })(window,document,''script'',''//www.google-analytics.com/analytics.js'',''ga'');
+
+    ga(''create'', ''UA-41508012-1'', ''cs4hsrobots.appspot.com'');
+
+    ga(''send'', ''pageview'');
+
+    </script>
+
+    ', before_navbar_ends: <!-- base.before_navbar_ends -->, locale: en_US, nav_header: Educational
+    Robots for Absolute Beginners, privacy_terms_url: PRIVACY_POLICY_AND_TERMS_OF_SERVICE,
+  show_gplus_button: false}
+course:
+  admin_user_emails: '[evanlavender13@gmail.com] [j.senior66@gmail.com] '
+  announcement_list_email: ''
+  announcement_list_url: https://groups.google.com/group/cs4hsrobots-announcements
+  blurb: <h6>I am a course Abstract and i am a bunch of tiny words because thats what i do and im an h6 because h6 is the smalleest and h1 is the biggest</h6>
+  browsable: true
+  forum_email: ''
+  forum_embed_url: https://groups.google.com/forum/embed/?place=forum/cs4hsrobots-forums
+  forum_url: https://groups.google.com/group/cs4hsrobots-forums
+  instructor_details: Jennifer S. Kay <br> Rowan University Laboratory for Educational
+    Robotics
+  locale: en_US
+  main_image: {alt_text: alternate text, url: assets/img/ruler_16bit.png}
+  main_video: {url: 'https://www.youtube.com/embed/xZY43QSx3Fk?rel=0'}
+  now_available: true
+  r_blurb: "<h1 style=\"color:orange\">Welcome! To get started, click on \"Test Unit\"\
+    \ below and im h1.</h1>\nIf you ever get stuck on something, remember you can: <br/>\n<ul>\
+    \        <li>Visit the resources page (above)</li>\n        <li>Visit the course\
+    \ forum pages (above) to ask a question</li>\n        <li>Look at the \"Extra\
+    \ Help\" videos (below, starting week 3) for specific tips</li> <li><h4 style=\"color:purple\">I am Jen and i have stupid computer blarrrhghh in purple and h4</h4></li> <li><h2 style=\"color:cyan\">I am <u>Mark</u> and i am in cyan and h2</h2></li></ul>\n"
+  start_date: ''
+  title: Educational Robots for Absolute Beginners
+institution:
+  logo: {alt_text: Rowan University Lab for Educational Robotics, url: assets/img/ruler_16bit.png}
+  name: Rowan University
+  url: http://www.rowan.edu
+preview: {after_main_content_ends: <!-- preview.after_main_content_ends -->, after_top_content_ends: <!--
+    preview.after_top_content_ends -->}
+reg_form: {additional_registration_fields: <!-- reg_form.additional_registration_fields
+    -->, can_register: true, header_text: 'Welcome! Just enter your name below, hit
+    enroll, and we will register you in the course
+
+    and you can get started.
+
+    '}
+unit: {after_content_begins: <!-- unit.after_content_begins -->, after_leftnav_begins: <!--
+    unit.after_leftnav_begins -->, before_content_ends: <!-- unit.before_content_ends
+    -->, before_leftnav_ends: <!-- unit.before_leftnav_ends -->}

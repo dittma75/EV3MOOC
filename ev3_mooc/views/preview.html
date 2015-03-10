@@ -1,0 +1,77 @@
+{% extends 'base_preview.html' %}
+
+{% block top_content %}
+  <script>
+    {# I18N: This is shown to the student if their email is already in the database upon pre-registration. #}
+	var preRegExistsMsg = "{{ gettext('The email address you entered has already been preregistered') }}";
+	if(window.location.hash == '#pre_registration_exists') {
+	  cbShowMsg(preRegExistsMsg);
+	  setTimeout(function() {cbHideMsg();}, 20000);
+	}
+    {# I18N: This is shown to the student in a popup after pre-registration. #}
+	var preRegConfirmationMsg = "{{ gettext('Thank you for preregistering. You should receive an email confirming your preregistration shortly.') }}";
+	if(window.location.hash == '#pre_registration_confirmation') {
+	  cbShowMsg(preRegConfirmationMsg);
+	  setTimeout(function() {cbHideMsg();}, 20000);
+	}
+    {# I18N: This is shown to the student in a popup if registrations for the course are not open. #}
+    var regClosedMsg = "{{ gettext('Registrations for this course are not open.') }}";
+    if(window.location.hash == '#registration_closed') {
+      cbShowMsg(regClosedMsg);
+      setTimeout(function() {cbHideMsg();}, 20000);
+    }
+  </script>
+  <div class="gcb-cols">
+    <div class="gcb-col-11 gcb-aside">
+      {% include 'summary.html' %}	  
+	  {% if course_info.reg_form.can_register %}           
+		{% include 'registration_module.html' %}
+	  {% else %}
+		{% include 'pre_registration_module.html' %}
+	  {% endif %}
+    </div>
+  </div>
+  {{course_info.preview.after_top_content_ends | safe}}
+{% endblock %}
+
+{% block main_content %}
+  <!--
+  <div style="margin-top: 20px;" class="gcb-cols">
+    <div class="gcb-col-1">
+    </div>
+    <div class="gcb-col-9">
+
+      <h1 class="gcb-schedule-headers">
+        {# I18N: This should be interpreted as a noun. It is the title for the course schedule on the main contents page. #}
+        {{ gettext('Scheduleee') }}
+      </h1>
+
+	  
+      <div id="gcb-main">
+        <div style="width: 100%;" class="gcb-nav" id="gcb-nav-y">
+          <ul>
+            {% for unit in units %}
+              {% if unit.type == 'A' %}
+                <li><p class="gcb-top-content">{{ unit.title }}</p></li>
+              {% elif unit.type == 'U' %}
+                <li><p class="gcb-top-content">
+                  {# I18N: A row in the course schedule. #}
+                  {{ gettext('Unit %(id)s - %(title)s', id=unit.index, title=unit.title) }}
+                </p></li>
+              {% elif unit.type == 'O' %}
+                <li><p class="gcb-top-content"> {{ unit.title }} </p></li>
+              {% else %}
+                <li><p class="gcb-top-content">
+                  Error: unit type not recognized.
+                </p></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  -->
+  {{course_info.preview.after_main_content_ends | safe}}
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base_course.html' %}
+
+{% block main_content %}
+<br>
+<p>
+<h3>Our course was built using the <a href = "https://code.google.com/p/course-builder/">Google Course-Builder Tool</a> which requires you to have a free Google account to register for the course. Google shares your email address with us but not your password or any other personal information.</h3>
+<br/>
+
+
+<h3>If you don't already have a Google Account:</h3>
+<ul>
+<a class="gcb-button gcb-button-small" 
+href="https://accounts.google.com/signup" role="button">
+{# I18N: Registration button on the main course page. #}
+{{ gettext('Take Me to Google Accounts') }}
+</a>
+</ul>
+<br/>
+<h3>If you already have a Google Account:</h3>
+<ul>
+
+<a style="background-color:green" class="gcb-button gcb-button-large" href="register" role="button">
+{# I18N: Registration button on the main course page. #}
+{{ gettext('Get Started!') }}
+</a>
+</ul>
+{% endblock %}
