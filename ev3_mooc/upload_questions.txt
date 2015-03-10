@@ -1,2 +1,0 @@
-appcfg.py upload_data --config_file=bulkloader.yaml --filename=questions2.csv --namespace=ns_data --kind=QuestionEntity --url=http://cs4hsrobots.appspot.com/_ah/remote_api
-pause
